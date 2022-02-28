@@ -83,3 +83,5 @@ lint/generated/
 lint/outputs/
 lint/tmp/
 # lint/reports/
+/.idea/sonarlint/issuestore/index.pb
+/.idea/misc.xml
