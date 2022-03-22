@@ -1,4 +1,4 @@
-package by.bsuir.fitness_planner;
+package by.bsuir.fitness_planner.controller;
 
 import android.os.Bundle;
 
@@ -13,6 +13,7 @@ import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
 import androidx.navigation.ui.NavigationUI;
 
+import by.bsuir.fitness_planner.R;
 import by.bsuir.fitness_planner.databinding.ActivityMainBinding;
 
 import android.view.Menu;

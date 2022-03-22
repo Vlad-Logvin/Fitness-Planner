@@ -1,15 +1,22 @@
-package by.bsuir.fitness_planner;
+package by.bsuir.fitness_planner.controller;
 
+import android.os.Build;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.RequiresApi;
 import androidx.fragment.app.Fragment;
 import androidx.navigation.fragment.NavHostFragment;
 
+import java.time.LocalDate;
+
+import by.bsuir.fitness_planner.R;
 import by.bsuir.fitness_planner.databinding.FragmentSecondBinding;
+import by.bsuir.fitness_planner.model.User;
+import by.bsuir.fitness_planner.service.ServiceFactory;
 
 public class SecondFragment extends Fragment {
 
@@ -30,6 +37,7 @@ public class SecondFragment extends Fragment {
         super.onViewCreated(view, savedInstanceState);
 
         binding.buttonSecond.setOnClickListener(new View.OnClickListener() {
+            @RequiresApi(api = Build.VERSION_CODES.O)
             @Override
             public void onClick(View view) {
                 NavHostFragment.findNavController(SecondFragment.this)

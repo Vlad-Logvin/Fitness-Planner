@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/FirstFragment"
-        android:name="by.bsuir.fitness_planner.FirstFragment"
+        android:name="by.bsuir.fitness_planner.controller.FirstFragment"
         android:label="@string/first_fragment_label"
         tools:layout="@layout/fragment_first">
 
@@ -17,7 +17,7 @@
     </fragment>
     <fragment
         android:id="@+id/SecondFragment"
-        android:name="by.bsuir.fitness_planner.SecondFragment"
+        android:name="by.bsuir.fitness_planner.controller.SecondFragment"
         android:label="@string/second_fragment_label"
         tools:layout="@layout/fragment_second">
 
