@@ -7,7 +7,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 import by.bsuir.fitness_planner.model.User;
-import by.bsuir.fitness_planner.persistence.AppDatabase;
+import by.bsuir.fitness_planner.persistence.config.AppDatabase;
 import by.bsuir.fitness_planner.service.UserService;
 
 public class UserServiceImpl implements UserService {
@@ -49,4 +49,14 @@ public class UserServiceImpl implements UserService {
         return user;
     }
 
+    @Override
+    public User delete(Context context, User user) {
+        try {
+            AppDatabase.getAppDatabase(context).userPersistence().save(user);
+        } catch (SQLException e) {
+            logger.log(Level.SEVERE, "User " + user.toString() + " was not deleted | existed!");
+            return null;
+        }
+        return user;
+    }
 }

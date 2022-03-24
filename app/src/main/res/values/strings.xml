@@ -9,4 +9,16 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="fitness_planner">Fitness Planner</string>
+    <string name="create_account">Create Account</string>
+    <string name="fill_the_details_to_sing_in_the_account">Fill the details to sing in the account</string>
+    <string name="name">Name</string>
+    <string name="email">Email</string>
+    <string name="sign_in">Sign In</string>
+    <string name="tell_us_your_gender">Tell us\nyour gender</string>
+    <string name="male">Male</string>
+    <string name="female">Female</string>
+    <string name="tell_us_your_age">Tell us\nyour age</string>
+    <string name="tell_us_your_height">Tell us\nyour height</string>
+    <string name="tell_us_your_weight">Tell us\nyour weight</string>
 </resources>

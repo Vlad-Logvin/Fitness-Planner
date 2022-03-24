@@ -1,4 +1,4 @@
-package by.bsuir.fitness_planner.persistence;
+package by.bsuir.fitness_planner.persistence.config;
 
 import android.content.Context;
 
@@ -11,6 +11,7 @@ import by.bsuir.fitness_planner.model.Rest;
 import by.bsuir.fitness_planner.model.Sleep;
 import by.bsuir.fitness_planner.model.User;
 import by.bsuir.fitness_planner.model.Water;
+import by.bsuir.fitness_planner.persistence.UserPersistence;
 
 @Database(entities = {User.class, Food.class, Rest.class, Water.class, Sleep.class}, version = 1)
 public abstract class AppDatabase extends RoomDatabase {

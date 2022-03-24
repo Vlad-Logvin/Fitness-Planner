@@ -3,26 +3,86 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/AuthFragment">
+
+    <!--    <fragment-->
+    <!--        android:id="@+id/FirstFragment"-->
+    <!--        android:name="by.bsuir.fitness_planner.controller.FirstFragment"-->
+    <!--        android:label="@string/first_fragment_label"-->
+    <!--        tools:layout="@layout/fragment_first">-->
+
+    <!--        <action-->
+    <!--            android:id="@+id/action_FirstFragment_to_SecondFragment"-->
+    <!--            app:destination="@id/SecondFragment" />-->
+    <!--    </fragment>-->
+    <!--    <fragment-->
+    <!--        android:id="@+id/SecondFragment"-->
+    <!--        android:name="by.bsuir.fitness_planner.controller.SecondFragment"-->
+    <!--        android:label="@string/second_fragment_label"-->
+    <!--        tools:layout="@layout/fragment_second">-->
+
+    <!--        <action-->
+    <!--            android:id="@+id/action_SecondFragment_to_FirstFragment"-->
+    <!--            app:destination="@id/FirstFragment" />-->
+    <!--    </fragment>-->
 
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="by.bsuir.fitness_planner.controller.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
-
+        android:id="@+id/AuthFragment"
+        android:name="by.bsuir.fitness_planner.controller.auth.AuthFragment"
+        android:label="Auth Fragment"
+        tools:layout="@layout/auth_fragment">
         <action
-            android:id="@+id/action_FirstFragment_to_SecondFragment"
-            app:destination="@id/SecondFragment" />
+            android:id="@+id/action_AuthFragment_to_GenderFragment"
+            app:destination="@id/GenderFragment" />
     </fragment>
+
     <fragment
-        android:id="@+id/SecondFragment"
-        android:name="by.bsuir.fitness_planner.controller.SecondFragment"
-        android:label="@string/second_fragment_label"
-        tools:layout="@layout/fragment_second">
-
+        android:id="@+id/GenderFragment"
+        android:name="by.bsuir.fitness_planner.controller.auth.GenderFragment"
+        android:label="Gender Fragment"
+        tools:layout="@layout/gender_fragment">
         <action
-            android:id="@+id/action_SecondFragment_to_FirstFragment"
-            app:destination="@id/FirstFragment" />
+            android:id="@+id/action_GenderFragment_to_AuthFragment"
+            app:destination="@id/AuthFragment" />
+        <action
+            android:id="@+id/action_GenderFragment_to_AgeFragment"
+            app:destination="@id/AgeFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/AgeFragment"
+        android:name="by.bsuir.fitness_planner.controller.auth.AgeFragment"
+        android:label="Age Fragment"
+        tools:layout="@layout/age_fragment">
+        <action
+            android:id="@+id/action_AgeFragment_to_GenderFragment"
+            app:destination="@id/GenderFragment" />
+        <action
+            android:id="@+id/action_AgeFragment_to_HeightFragment"
+            app:destination="@id/HeightFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/HeightFragment"
+        android:name="by.bsuir.fitness_planner.controller.auth.HeightFragment"
+        android:label="Height Fragment"
+        tools:layout="@layout/height_fragment">
+        <action
+            android:id="@+id/action_HeightFragment_to_AgeFragment"
+            app:destination="@id/AgeFragment" />
+        <action
+            android:id="@+id/action_HeightFragment_to_WeightFragment"
+            app:destination="@id/WeightFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/WeightFragment"
+        android:name="by.bsuir.fitness_planner.controller.auth.WeightFragment"
+        android:label="Weight Fragment"
+        tools:layout="@layout/weight_fragment">
+        <action
+            android:id="@+id/action_WeightFragment_to_HeightFragment"
+            app:destination="@id/HeightFragment" />
+    </fragment>
+
 </navigation>

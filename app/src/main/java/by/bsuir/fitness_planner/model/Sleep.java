@@ -2,14 +2,18 @@ package by.bsuir.fitness_planner.model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.ForeignKey;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
 import java.time.LocalDate;
 
 import by.bsuir.fitness_planner.util.LocalDateTypeConverter;
+import lombok.Data;
 
-@Entity(tableName = "sleeps")
+@Data
+@Entity(tableName = "sleeps",
+        foreignKeys = {@ForeignKey(entity = User.class, parentColumns = "id", childColumns = "user_id", onDelete = ForeignKey.SET_NULL)})
 public class Sleep {
     @PrimaryKey(autoGenerate = true)
     private long id;
