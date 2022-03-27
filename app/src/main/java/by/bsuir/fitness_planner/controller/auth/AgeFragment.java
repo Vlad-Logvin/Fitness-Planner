@@ -1,6 +1,7 @@
 package by.bsuir.fitness_planner.controller.auth;
 
 import android.os.Bundle;
+import android.text.InputFilter;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +12,7 @@ import androidx.navigation.fragment.NavHostFragment;
 
 import by.bsuir.fitness_planner.R;
 import by.bsuir.fitness_planner.databinding.AgeFragmentBinding;
+import by.bsuir.fitness_planner.util.InputFilterMinMax;
 
 public class AgeFragment extends Fragment {
     private AgeFragmentBinding binding;
@@ -31,6 +33,7 @@ public class AgeFragment extends Fragment {
                 .navigate(R.id.action_AgeFragment_to_GenderFragment));
         binding.next.setOnClickListener(v -> NavHostFragment.findNavController(AgeFragment.this)
                 .navigate(R.id.action_AgeFragment_to_HeightFragment));
+        binding.age.setFilters(new InputFilter[]{new InputFilterMinMax(1, 118, 0)});
     }
 
     @Override

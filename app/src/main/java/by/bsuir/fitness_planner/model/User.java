@@ -3,13 +3,9 @@ package by.bsuir.fitness_planner.model;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
-import androidx.room.Relation;
 import androidx.room.TypeConverters;
 
 import java.time.LocalDate;
-import java.util.Date;
-import java.util.List;
-import java.util.Objects;
 
 import by.bsuir.fitness_planner.util.LocalDateTypeConverter;
 import lombok.Data;
