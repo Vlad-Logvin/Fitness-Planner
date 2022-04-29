@@ -5,6 +5,7 @@ import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 import androidx.room.TypeConverters;
 
+import java.io.Serializable;
 import java.time.LocalDate;
 
 import by.bsuir.fitness_planner.util.LocalDateTypeConverter;
@@ -12,7 +13,7 @@ import lombok.Data;
 
 @Data
 @Entity(tableName = "users")
-public class User {
+public class User implements Serializable {
     @PrimaryKey(autoGenerate = true)
     private long id;
 
@@ -22,9 +23,8 @@ public class User {
     @ColumnInfo
     private String name;
 
-    @ColumnInfo(name = "birth_date")
-    @TypeConverters(value = LocalDateTypeConverter.class)
-    private LocalDate birthDate;
+    @ColumnInfo
+    private int age;
 
     @ColumnInfo
     private String gender;
@@ -34,4 +34,7 @@ public class User {
 
     @ColumnInfo
     private double height;
+
+    @ColumnInfo
+    private boolean isLast;
 }

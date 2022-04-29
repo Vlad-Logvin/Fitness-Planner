@@ -34,6 +34,11 @@
         <action
             android:id="@+id/action_AuthFragment_to_GenderFragment"
             app:destination="@id/GenderFragment" />
+        <argument
+            android:name="user"
+            app:argType="by.bsuir.fitness_planner.model.User"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
 
     <fragment
@@ -47,6 +52,11 @@
         <action
             android:id="@+id/action_GenderFragment_to_AgeFragment"
             app:destination="@id/AgeFragment" />
+        <argument
+            android:name="user"
+            app:argType="by.bsuir.fitness_planner.model.User"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
 
     <fragment
@@ -60,6 +70,11 @@
         <action
             android:id="@+id/action_AgeFragment_to_HeightFragment"
             app:destination="@id/HeightFragment" />
+        <argument
+            android:name="user"
+            app:argType="by.bsuir.fitness_planner.model.User"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
 
     <fragment
@@ -73,6 +88,11 @@
         <action
             android:id="@+id/action_HeightFragment_to_WeightFragment"
             app:destination="@id/WeightFragment" />
+        <argument
+            android:name="user"
+            app:argType="by.bsuir.fitness_planner.model.User"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
 
     <fragment
@@ -83,6 +103,11 @@
         <action
             android:id="@+id/action_WeightFragment_to_HeightFragment"
             app:destination="@id/HeightFragment" />
+        <argument
+            android:name="user"
+            app:argType="by.bsuir.fitness_planner.model.User"
+            app:nullable="true"
+            android:defaultValue="@null" />
     </fragment>
 
 </navigation>
