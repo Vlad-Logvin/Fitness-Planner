@@ -13,7 +13,7 @@ import by.bsuir.fitness_planner.model.User;
 import by.bsuir.fitness_planner.model.Water;
 import by.bsuir.fitness_planner.persistence.UserPersistence;
 
-@Database(entities = {User.class, Food.class, Rest.class, Water.class, Sleep.class}, version = 1)
+@Database(entities = {User.class, Food.class, Rest.class, Water.class, Sleep.class}, version = 2)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase instance;
@@ -24,6 +24,7 @@ public abstract class AppDatabase extends RoomDatabase {
         if (instance == null) {
             instance = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, "FitnessPlanner.db")
                     .allowMainThreadQueries()
+                    .fallbackToDestructiveMigration()
                     .build();
         }
         return instance;

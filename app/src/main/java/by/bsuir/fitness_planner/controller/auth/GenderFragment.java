@@ -40,15 +40,19 @@ public class GenderFragment extends Fragment {
     private void checkFemale() {
         binding.female.setCompoundDrawablesRelativeWithIntrinsicBounds(null, getResources()
                 .getDrawable(R.drawable.female_gender_checked_64x64), null, null);
+        binding.female.setTextColor(getResources().getColor(R.color.orange));
         binding.male.setCompoundDrawablesRelativeWithIntrinsicBounds(null, getResources()
                 .getDrawable(R.drawable.male_gender_unchecked_64x64), null, null);
+        binding.male.setTextColor(getResources().getColor(R.color.black));
     }
 
     private void checkMale() {
         binding.male.setCompoundDrawablesRelativeWithIntrinsicBounds(null, getResources()
                 .getDrawable(R.drawable.male_gender_checked_64x64), null, null);
+        binding.male.setTextColor(getResources().getColor(R.color.orange));
         binding.female.setCompoundDrawablesRelativeWithIntrinsicBounds(null, getResources()
                 .getDrawable(R.drawable.female_gender_unchecked_64x64), null, null);
+        binding.female.setTextColor(getResources().getColor(R.color.black));
     }
 
     private void processClickOnNext() {

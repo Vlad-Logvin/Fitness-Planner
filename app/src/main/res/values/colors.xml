@@ -6,7 +6,12 @@
     <color name="teal_200">#FF03DAC5</color>
     <color name="teal_700">#FF018786</color>
     <color name="black">#FF000000</color>
+    <color name="grey">#959E9F</color>
     <color name="white">#FFFFFFFF</color>
     <color name="nasty_blue">#198FB4</color>
     <color name="orange">#F8753D</color>
+    <color name="food_color">#FFF6E0</color>
+    <color name="rest_color">#EFF0FF</color>
+    <color name="sleep_color">#DDFFDA</color>
+    <color name="water_color">#EEF7FF</color>
 </resources>

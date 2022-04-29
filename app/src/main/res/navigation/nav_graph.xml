@@ -3,28 +3,111 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/AuthFragment">
+    app:startDestination="@id/StartFragment">
 
-    <!--    <fragment-->
-    <!--        android:id="@+id/FirstFragment"-->
-    <!--        android:name="by.bsuir.fitness_planner.controller.FirstFragment"-->
-    <!--        android:label="@string/first_fragment_label"-->
-    <!--        tools:layout="@layout/fragment_first">-->
+    <fragment
+        android:id="@+id/StartFragment"
+        android:name="by.bsuir.fitness_planner.controller.StartFragment"
+        android:label="Start Fragment"
+        tools:layout="@layout/start_fragment">
+        <action
+            android:id="@+id/action_StartFragment_to_AuthFragment"
+            app:destination="@id/AuthFragment" />
+        <action
+            android:id="@+id/action_StartFragment_to_GeneralPlanFragment"
+            app:destination="@id/GeneralPlanFragment" />
+        <argument
+            android:name="user"
+            android:defaultValue="@null"
+            app:argType="by.bsuir.fitness_planner.model.User"
+            app:nullable="true" />
+    </fragment>
 
-    <!--        <action-->
-    <!--            android:id="@+id/action_FirstFragment_to_SecondFragment"-->
-    <!--            app:destination="@id/SecondFragment" />-->
-    <!--    </fragment>-->
-    <!--    <fragment-->
-    <!--        android:id="@+id/SecondFragment"-->
-    <!--        android:name="by.bsuir.fitness_planner.controller.SecondFragment"-->
-    <!--        android:label="@string/second_fragment_label"-->
-    <!--        tools:layout="@layout/fragment_second">-->
+    <fragment
+        android:id="@+id/GeneralPlanFragment"
+        android:name="by.bsuir.fitness_planner.controller.plan.GeneralPlanFragment"
+        android:label="General Plan Fragment"
+        tools:layout="@layout/general_plan_fragment">
+        <action
+            android:id="@+id/action_GeneralPlanFragment_to_FoodFragment"
+            app:destination="@id/FoodFragment" />
+        <action
+            android:id="@+id/action_GeneralPlanFragment_to_WaterFragment"
+            app:destination="@id/WaterFragment" />
+        <action
+            android:id="@+id/action_GeneralPlanFragment_to_RestFragment"
+            app:destination="@id/RestFragment" />
+        <action
+            android:id="@+id/action_GeneralPlanFragment_to_SleepFragment"
+            app:destination="@id/SleepFragment" />
+        <argument
+            android:name="user"
+            android:defaultValue="@null"
+            app:argType="by.bsuir.fitness_planner.model.User"
+            app:nullable="true" />
+    </fragment>
 
-    <!--        <action-->
-    <!--            android:id="@+id/action_SecondFragment_to_FirstFragment"-->
-    <!--            app:destination="@id/FirstFragment" />-->
-    <!--    </fragment>-->
+
+    <fragment
+        android:id="@+id/FoodFragment"
+        android:name="by.bsuir.fitness_planner.controller.plan.FoodFragment"
+        android:label="Food Fragment"
+        tools:layout="@layout/food_fragment">
+        <action
+            android:id="@+id/action_FoodFragment_to_GeneralPlanFragment"
+            app:destination="@id/GeneralPlanFragment" />
+        <argument
+            android:name="user"
+            android:defaultValue="@null"
+            app:argType="by.bsuir.fitness_planner.model.User"
+            app:nullable="true" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/WaterFragment"
+        android:name="by.bsuir.fitness_planner.controller.plan.WaterFragment"
+        android:label="Water Fragment"
+        tools:layout="@layout/water_fragment">
+        <action
+            android:id="@+id/action_WaterFragment_to_GeneralPlanFragment"
+            app:destination="@id/GeneralPlanFragment" />
+        <argument
+            android:name="user"
+            android:defaultValue="@null"
+            app:argType="by.bsuir.fitness_planner.model.User"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/RestFragment"
+        android:name="by.bsuir.fitness_planner.controller.plan.RestFragment"
+        android:label="Rest Fragment"
+        tools:layout="@layout/rest_fragment">
+        <action
+            android:id="@+id/action_RestFragment_to_GeneralPlanFragment"
+            app:destination="@id/GeneralPlanFragment" />
+        <argument
+            android:name="user"
+            android:defaultValue="@null"
+            app:argType="by.bsuir.fitness_planner.model.User"
+            app:nullable="true" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/SleepFragment"
+        android:name="by.bsuir.fitness_planner.controller.plan.SleepFragment"
+        android:label="Sleep Fragment"
+        tools:layout="@layout/sleep_fragment">
+        <action
+            android:id="@+id/action_SleepFragment_to_GeneralPlanFragment"
+            app:destination="@id/GeneralPlanFragment" />
+        <argument
+            android:name="user"
+            android:defaultValue="@null"
+            app:argType="by.bsuir.fitness_planner.model.User"
+            app:nullable="true" />
+    </fragment>
 
     <fragment
         android:id="@+id/AuthFragment"
@@ -36,9 +119,9 @@
             app:destination="@id/GenderFragment" />
         <argument
             android:name="user"
+            android:defaultValue="@null"
             app:argType="by.bsuir.fitness_planner.model.User"
-            app:nullable="true"
-            android:defaultValue="@null" />
+            app:nullable="true" />
     </fragment>
 
     <fragment
@@ -54,9 +137,9 @@
             app:destination="@id/AgeFragment" />
         <argument
             android:name="user"
+            android:defaultValue="@null"
             app:argType="by.bsuir.fitness_planner.model.User"
-            app:nullable="true"
-            android:defaultValue="@null" />
+            app:nullable="true" />
     </fragment>
 
     <fragment
@@ -72,9 +155,9 @@
             app:destination="@id/HeightFragment" />
         <argument
             android:name="user"
+            android:defaultValue="@null"
             app:argType="by.bsuir.fitness_planner.model.User"
-            app:nullable="true"
-            android:defaultValue="@null" />
+            app:nullable="true" />
     </fragment>
 
     <fragment
@@ -90,9 +173,9 @@
             app:destination="@id/WeightFragment" />
         <argument
             android:name="user"
+            android:defaultValue="@null"
             app:argType="by.bsuir.fitness_planner.model.User"
-            app:nullable="true"
-            android:defaultValue="@null" />
+            app:nullable="true" />
     </fragment>
 
     <fragment
@@ -103,11 +186,14 @@
         <action
             android:id="@+id/action_WeightFragment_to_HeightFragment"
             app:destination="@id/HeightFragment" />
+        <action
+            android:id="@+id/action_WeightFragment_to_StartFragment"
+            app:destination="@id/StartFragment" />
         <argument
             android:name="user"
+            android:defaultValue="@null"
             app:argType="by.bsuir.fitness_planner.model.User"
-            app:nullable="true"
-            android:defaultValue="@null" />
+            app:nullable="true" />
     </fragment>
 
 </navigation>

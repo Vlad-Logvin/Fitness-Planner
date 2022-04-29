@@ -1,24 +1,34 @@
 <resources>
     <string name="app_name">fitness-planner</string>
     <string name="action_settings">Settings</string>
-    <!-- Strings used for fragments for navigation -->
-    <string name="first_fragment_label">First Fragment</string>
-    <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
-    <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello first fragment</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
     <string name="fitness_planner">Fitness Planner</string>
     <string name="create_account">Create Account</string>
-    <string name="fill_the_details_to_sing_in_the_account">Fill the details to sing in the account</string>
+    <string name="fill_the_details_to_sing_in_the_account">Fill The Details To Sing In The Account</string>
     <string name="name">Name</string>
     <string name="email">Email</string>
     <string name="sign_in">Sign In</string>
-    <string name="tell_us_your_gender">Tell us\nyour gender</string>
+    <string name="tell_us_your_gender">Tell Us\nYour Gender</string>
     <string name="male">Male</string>
     <string name="female">Female</string>
-    <string name="tell_us_your_age">Tell us\nyour age</string>
-    <string name="tell_us_your_height">Tell us\nyour height</string>
-    <string name="tell_us_your_weight">Tell us\nyour weight</string>
+    <string name="tell_us_your_age">Tell Us\nYour Age</string>
+    <string name="tell_us_your_height">Tell Us\nYour Height</string>
+    <string name="tell_us_your_weight">Tell Us\nYour Weight</string>
+    <string name="my_plan">My Plan</string>
+    <string name="daily_plan">Daily Plan</string>
+    <string name="calories">Calories</string>
+    <string name="kilocalories">Kilocalories</string>
+    <string name="rest">Rest</string>
+    <string name="hours">Hours</string>
+    <string name="sleep">Sleep</string>
+    <string name="water">Water</string>
+    <string name="liters">Liters</string>
+    <string name="calories_details">Calories Details</string>
+    <string name="keep_going">Keep Going!</string>
+    <string name="you_have_to_eat_more_calories">You Have To Eat\nMore Calories!</string>
+    <string name="good_job">Good Job!</string>
+    <string name="your_daily_tasks_almost_done">Your Daily Tasks\nAlmost Done!</string>
+    <string name="water_details">Water Details</string>
+    <string name="rest_details">Rest Details</string>
+    <string name="sleep_details">Sleep Details</string>
+    <string name="you_have_to_sleep_more">You Have To\nSleep More</string>
 </resources>

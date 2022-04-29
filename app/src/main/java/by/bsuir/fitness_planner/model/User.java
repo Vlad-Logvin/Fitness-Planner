@@ -2,17 +2,15 @@ package by.bsuir.fitness_planner.model;
 
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
+import androidx.room.Index;
 import androidx.room.PrimaryKey;
-import androidx.room.TypeConverters;
 
 import java.io.Serializable;
-import java.time.LocalDate;
 
-import by.bsuir.fitness_planner.util.LocalDateTypeConverter;
 import lombok.Data;
 
 @Data
-@Entity(tableName = "users")
+@Entity(tableName = "users", indices = {@Index(value = "email", unique = true)})
 public class User implements Serializable {
     @PrimaryKey(autoGenerate = true)
     private long id;
