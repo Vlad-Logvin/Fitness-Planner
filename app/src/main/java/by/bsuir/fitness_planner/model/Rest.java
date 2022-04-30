@@ -9,11 +9,13 @@ import androidx.room.TypeConverters;
 import java.time.LocalDate;
 
 import by.bsuir.fitness_planner.util.LocalDateTypeConverter;
+import lombok.AllArgsConstructor;
 import lombok.Data;
 
 @Data
 @Entity(tableName = "rests",
         foreignKeys = {@ForeignKey(entity = User.class, parentColumns = "id", childColumns = "user_id", onDelete = ForeignKey.SET_NULL)})
+@AllArgsConstructor
 public class Rest {
     @PrimaryKey(autoGenerate = true)
     private long id;
@@ -26,5 +28,5 @@ public class Rest {
     private LocalDate created;
 
     @ColumnInfo
-    private int amount;
+    private double amount;
 }

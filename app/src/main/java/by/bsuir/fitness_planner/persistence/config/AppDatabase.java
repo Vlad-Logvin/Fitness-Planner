@@ -17,7 +17,7 @@ import by.bsuir.fitness_planner.persistence.SleepPersistence;
 import by.bsuir.fitness_planner.persistence.UserPersistence;
 import by.bsuir.fitness_planner.persistence.WaterPersistence;
 
-@Database(entities = {User.class, Food.class, Rest.class, Water.class, Sleep.class}, version = 2)
+@Database(entities = {User.class, Food.class, Rest.class, Water.class, Sleep.class}, version = 3)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase instance;

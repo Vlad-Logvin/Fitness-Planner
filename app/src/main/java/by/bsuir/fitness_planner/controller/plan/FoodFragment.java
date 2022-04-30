@@ -62,7 +62,7 @@ public class FoodFragment extends Fragment {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         View foodPopup = getLayoutInflater().inflate(R.layout.food_popup, null);
         builder.setView(foodPopup)
-                .setPositiveButton(R.string.add_food, this::processAddingFood)
+                .setPositiveButton(R.string.add, this::processAddingFood)
                 .setNegativeButton(R.string.cancel, (dialog, id) -> dialog.cancel());
         FoodPopupBinding.bind(foodPopup).grams
                 .setFilters(new InputFilter[]{new InputFilterMinMax(1, 15000, 2)});

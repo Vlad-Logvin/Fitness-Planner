@@ -35,4 +35,7 @@
     <string name="kilocalories">Kilocalories</string>
     <string name="cancel">Cancel</string>
     <string name="add">Add</string>
+    <string name="have_rest">Have Rest</string>
+    <string name="amount">Amount</string>
+    <string name="drink_water">Drink Water</string>
 </resources>
