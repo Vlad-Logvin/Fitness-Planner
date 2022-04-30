@@ -22,7 +22,7 @@ public interface SleepPersistence {
     List<Sleep> findByUserId(long userId);
 
     @Query(value = "SELECT * FROM sleeps WHERE user_id = :userId AND created = :date")
-    List<Sleep> findByUserIdAndDate(long userId, LocalDate date);
+    List<Sleep> findByUserIdAndDate(long userId, Long date);
 
     @Delete
     void delete(Sleep sleep);

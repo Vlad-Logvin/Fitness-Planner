@@ -22,7 +22,7 @@ public interface RestPersistence {
     List<Rest> findByUserId(long userId);
 
     @Query(value = "SELECT * FROM rests WHERE user_id = :userId AND created = :date")
-    List<Rest> findByUserIdAndDate(long userId, LocalDate date);
+    List<Rest> findByUserIdAndDate(long userId, Long date);
 
     @Delete
     void delete(Rest rest);

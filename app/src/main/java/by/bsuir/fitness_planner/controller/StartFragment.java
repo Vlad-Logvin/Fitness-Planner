@@ -27,10 +27,8 @@ public class StartFragment extends Fragment {
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         User user = ServiceFactory.getInstance().getUserService().findLast(getContext(), true);
         if (user != null) {
-            StartFragmentDirections.ActionStartFragmentToGeneralPlanFragment action = StartFragmentDirections
-                    .actionStartFragmentToGeneralPlanFragment();
-            action.setUser(user);
-            NavHostFragment.findNavController(StartFragment.this).navigate(action);
+            NavHostFragment.findNavController(StartFragment.this).navigate(StartFragmentDirections
+                    .actionStartFragmentToGeneralPlanFragment(user));
         } else {
             NavHostFragment.findNavController(StartFragment.this)
                     .navigate(StartFragmentDirections.actionStartFragmentToAuthFragment());

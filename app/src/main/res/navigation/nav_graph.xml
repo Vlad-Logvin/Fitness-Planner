@@ -42,7 +42,6 @@
             app:destination="@id/SleepFragment" />
         <argument
             android:name="user"
-            android:defaultValue="@null"
             app:argType="by.bsuir.fitness_planner.model.User"
             app:nullable="true" />
     </fragment>
@@ -58,7 +57,6 @@
             app:destination="@id/GeneralPlanFragment" />
         <argument
             android:name="user"
-            android:defaultValue="@null"
             app:argType="by.bsuir.fitness_planner.model.User"
             app:nullable="true" />
     </fragment>
@@ -74,7 +72,6 @@
             app:destination="@id/GeneralPlanFragment" />
         <argument
             android:name="user"
-            android:defaultValue="@null"
             app:argType="by.bsuir.fitness_planner.model.User"
             app:nullable="true" />
     </fragment>
@@ -89,7 +86,6 @@
             app:destination="@id/GeneralPlanFragment" />
         <argument
             android:name="user"
-            android:defaultValue="@null"
             app:argType="by.bsuir.fitness_planner.model.User"
             app:nullable="true" />
     </fragment>
@@ -104,7 +100,6 @@
             app:destination="@id/GeneralPlanFragment" />
         <argument
             android:name="user"
-            android:defaultValue="@null"
             app:argType="by.bsuir.fitness_planner.model.User"
             app:nullable="true" />
     </fragment>

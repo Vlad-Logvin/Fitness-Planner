@@ -16,7 +16,6 @@
     <string name="my_plan">My Plan</string>
     <string name="daily_plan">Daily Plan</string>
     <string name="calories">Calories</string>
-    <string name="kilocalories">Kilocalories</string>
     <string name="rest">Rest</string>
     <string name="hours">Hours</string>
     <string name="sleep">Sleep</string>
@@ -31,4 +30,9 @@
     <string name="rest_details">Rest Details</string>
     <string name="sleep_details">Sleep Details</string>
     <string name="you_have_to_sleep_more">You Have To\nSleep More</string>
+    <string name="add_food">Add Food</string>
+    <string name="grams">Grams</string>
+    <string name="kilocalories">Kilocalories</string>
+    <string name="cancel">Cancel</string>
+    <string name="add">Add</string>
 </resources>

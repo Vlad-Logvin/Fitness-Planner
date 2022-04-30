@@ -11,7 +11,11 @@ import by.bsuir.fitness_planner.model.Rest;
 import by.bsuir.fitness_planner.model.Sleep;
 import by.bsuir.fitness_planner.model.User;
 import by.bsuir.fitness_planner.model.Water;
+import by.bsuir.fitness_planner.persistence.FoodPersistence;
+import by.bsuir.fitness_planner.persistence.RestPersistence;
+import by.bsuir.fitness_planner.persistence.SleepPersistence;
 import by.bsuir.fitness_planner.persistence.UserPersistence;
+import by.bsuir.fitness_planner.persistence.WaterPersistence;
 
 @Database(entities = {User.class, Food.class, Rest.class, Water.class, Sleep.class}, version = 2)
 public abstract class AppDatabase extends RoomDatabase {
@@ -19,6 +23,10 @@ public abstract class AppDatabase extends RoomDatabase {
     private static AppDatabase instance;
 
     public abstract UserPersistence userPersistence();
+    public abstract FoodPersistence foodPersistence();
+    public abstract RestPersistence restPersistence();
+    public abstract WaterPersistence waterPersistence();
+    public abstract SleepPersistence sleepPersistence();
 
     public static AppDatabase getAppDatabase(Context context) {
         if (instance == null) {

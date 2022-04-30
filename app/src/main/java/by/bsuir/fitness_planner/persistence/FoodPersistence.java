@@ -5,7 +5,6 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import by.bsuir.fitness_planner.model.Food;
@@ -22,7 +21,7 @@ public interface FoodPersistence {
     List<Food> findByUserId(long userId);
 
     @Query(value = "SELECT * FROM foods WHERE user_id = :userId AND created = :date")
-    List<Food> findByUserIdAndDate(long userId, LocalDate date);
+    List<Food> findByUserIdAndDate(long userId, Long date);
 
     @Delete
     void delete(Food food);

@@ -22,7 +22,7 @@ public interface WaterPersistence {
     List<Water> findByUserId(long userId);
 
     @Query(value = "SELECT * FROM waters WHERE user_id = :userId AND created = :date")
-    List<Water> findByUserIdAndDate(long userId, LocalDate date);
+    List<Water> findByUserIdAndDate(long userId, Long date);
 
     @Delete
     void delete(Water water);
