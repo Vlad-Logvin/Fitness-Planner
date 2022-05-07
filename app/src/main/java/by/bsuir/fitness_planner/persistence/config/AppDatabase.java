@@ -17,20 +17,15 @@ import by.bsuir.fitness_planner.persistence.SleepPersistence;
 import by.bsuir.fitness_planner.persistence.UserPersistence;
 import by.bsuir.fitness_planner.persistence.WaterPersistence;
 
-@Database(entities = {User.class, Food.class, Rest.class, Water.class, Sleep.class}, version = 3)
+@Database(entities = {User.class, Food.class, Rest.class, Water.class, Sleep.class}, version = 4)
 public abstract class AppDatabase extends RoomDatabase {
 
     private static AppDatabase instance;
 
-    public abstract UserPersistence userPersistence();
-    public abstract FoodPersistence foodPersistence();
-    public abstract RestPersistence restPersistence();
-    public abstract WaterPersistence waterPersistence();
-    public abstract SleepPersistence sleepPersistence();
-
     public static AppDatabase getAppDatabase(Context context) {
         if (instance == null) {
-            instance = Room.databaseBuilder(context.getApplicationContext(), AppDatabase.class, "FitnessPlanner.db")
+            instance = Room.databaseBuilder(context
+                    .getApplicationContext(), AppDatabase.class, "FitnessPlanner.db")
                     .allowMainThreadQueries()
                     .fallbackToDestructiveMigration()
                     .build();
@@ -41,5 +36,15 @@ public abstract class AppDatabase extends RoomDatabase {
     public static void destroyInstance() {
         instance = null;
     }
+
+    public abstract UserPersistence userPersistence();
+
+    public abstract FoodPersistence foodPersistence();
+
+    public abstract RestPersistence restPersistence();
+
+    public abstract WaterPersistence waterPersistence();
+
+    public abstract SleepPersistence sleepPersistence();
 
 }

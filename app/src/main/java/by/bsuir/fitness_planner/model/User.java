@@ -34,5 +34,17 @@ public class User implements Serializable {
     private double height;
 
     @ColumnInfo
+    private double aimSleep;
+
+    @ColumnInfo
+    private double aimWater;
+
+    @ColumnInfo
+    private double aimCalories;
+
+    @ColumnInfo
+    private double aimRest;
+
+    @ColumnInfo
     private boolean isLast;
 }

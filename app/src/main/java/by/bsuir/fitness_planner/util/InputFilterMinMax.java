@@ -32,7 +32,8 @@ public class InputFilterMinMax implements InputFilter {
     }
 
     private String parseNumber(String[] input) {
-        return input.length >= 1 && !input[0].isEmpty() && !input[0].startsWith(".") ? input[0] : null;
+        return input.length >= 1 && !input[0].isEmpty() && !input[0]
+                .startsWith(".") ? input[0] : null;
     }
 
     private String parseFraction(String[] input) {

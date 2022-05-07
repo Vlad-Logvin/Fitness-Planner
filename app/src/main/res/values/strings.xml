@@ -38,4 +38,10 @@
     <string name="have_rest">Have Rest</string>
     <string name="amount">Amount</string>
     <string name="drink_water">Drink Water</string>
+    <string name="id">Id</string>
+    <string name="close">Close</string>
+    <string name="save">Save</string>
+    <string name="aim">AIM</string>
+    <string name="set_up_your_aims">Set Up Your Aims</string>
+    <string name="kcal">Kcal</string>
 </resources>

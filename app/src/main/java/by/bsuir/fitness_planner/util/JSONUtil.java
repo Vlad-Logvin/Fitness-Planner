@@ -4,12 +4,11 @@ import com.google.gson.Gson;
 
 public class JSONUtil {
     private static final JSONUtil instance = new JSONUtil();
+    private final Gson gson = new Gson();
 
     public static JSONUtil getInstance() {
         return instance;
     }
-
-    private final Gson gson = new Gson();
 
     public String toJson(Object obj) {
         return gson.toJson(obj);

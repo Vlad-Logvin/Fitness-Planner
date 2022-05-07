@@ -55,6 +55,10 @@ public class WeightFragment extends Fragment {
         DialogInterface.OnClickListener dialogClickListener = (dialog, which) -> {
             if (which == DialogInterface.BUTTON_POSITIVE) {
                 user.setLast(true);
+                user.setAimSleep(8d);
+                user.setAimCalories(2000d);
+                user.setAimRest(4);
+                user.setAimWater(3);
                 ServiceFactory.getInstance().getUserService().save(getContext(), user);
                 NavHostFragment.findNavController(WeightFragment.this)
                         .navigate(WeightFragmentDirections.actionWeightFragmentToStartFragment());

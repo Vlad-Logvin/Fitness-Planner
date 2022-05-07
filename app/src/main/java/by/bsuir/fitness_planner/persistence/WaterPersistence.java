@@ -5,7 +5,6 @@ import androidx.room.Delete;
 import androidx.room.Insert;
 import androidx.room.Query;
 
-import java.time.LocalDate;
 import java.util.List;
 
 import by.bsuir.fitness_planner.model.Water;
