@@ -66,8 +66,8 @@ public class FoodFragment extends Fragment {
         double sum = ServiceFactory.getInstance().getFoodService()
                 .findByUserIdAndDate(getContext(), user.getId(), LocalDate.now()).stream()
                 .mapToDouble(Food::getCalories).sum();
-        double percentage = user.getAimCalories() / sum * 100.0;
-        if (percentage > 60.0) {
+        double percentage = sum / user.getAimCalories() * 100.0;
+        if (percentage < 60.0) {
             return Response.KEEP_GOING.getMessage();
         } else if (percentage >= 60.0 && percentage < 95.0) {
             return Response.ALMOST_DONE.getMessage();

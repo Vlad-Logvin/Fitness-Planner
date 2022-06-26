@@ -72,10 +72,19 @@ public class GeneralPlanFragment extends Fragment {
         binding.back.setOnClickListener(v -> processExit());
     }
 
+    @SuppressLint("SetTextI18n")
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void setUpAim() {
         AlertDialog.Builder builder = new AlertDialog.Builder(getContext());
         View aimPopup = getLayoutInflater().inflate(R.layout.aim_popup, null);
+        ((EditText) aimPopup.findViewById(R.id.kilocalories_input))
+                .setText(Double.toString(user.getAimCalories()));
+        ((EditText) aimPopup.findViewById(R.id.rest_input))
+                .setText(Double.toString(user.getAimRest()));
+        ((EditText) aimPopup.findViewById(R.id.sleep_input))
+                .setText(Double.toString(user.getAimSleep()));
+        ((EditText) aimPopup.findViewById(R.id.water_input))
+                .setText(Double.toString(user.getAimWater()));
         builder.setView(aimPopup)
                 .setNegativeButton(R.string.close, (dialog, id) -> dialog.cancel())
                 .setPositiveButton(R.string.save, this::processSetUpAim);
@@ -84,7 +93,8 @@ public class GeneralPlanFragment extends Fragment {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private void processSetUpAim(DialogInterface dialog, int id) {
-        String kilocalories = ((EditText) ((AlertDialog) dialog).findViewById(R.id.kilocalories_input))
+        String kilocalories = ((EditText) ((AlertDialog) dialog)
+                .findViewById(R.id.kilocalories_input))
                 .getText()
                 .toString();
         String sleep = ((EditText) ((AlertDialog) dialog).findViewById(R.id.sleep_input))
@@ -250,4 +260,31 @@ public class GeneralPlanFragment extends Fragment {
         } catch (Exception ignored) {
         }
     }
+
+    /*
+    ServiceFactory.getInstance().getFoodService().eat(getContext(), new Food(0, user.getId(), LocalDate.now().minusDays(5), "Apple", 2000, 3000));
+ServiceFactory.getInstance().getFoodService().eat(getContext(), new Food(0, user.getId(), LocalDate.now().minusDays(4), "Apple", 2000, 2500));
+ServiceFactory.getInstance().getFoodService().eat(getContext(), new Food(0, user.getId(), LocalDate.now().minusDays(3), "Apple", 2000, 2750));
+ServiceFactory.getInstance().getFoodService().eat(getContext(), new Food(0, user.getId(), LocalDate.now().minusDays(2), "Apple", 2000, 3000));
+ServiceFactory.getInstance().getFoodService().eat(getContext(), new Food(0, user.getId(), LocalDate.now().minusDays(1), "Apple", 2000, 4000));
+ServiceFactory.getInstance().getFoodService().eat(getContext(), new Food(0, user.getId(), LocalDate.now(), "Apple", 2000, 3000));
+
+ServiceFactory.getInstance().getSleepService().sleep(getContext(), new Sleep(0, user.getId(), LocalDate.now().minusDays(5), 8));
+ServiceFactory.getInstance().getSleepService().sleep(getContext(), new Sleep(0, user.getId(), LocalDate.now().minusDays(4), 7));
+ServiceFactory.getInstance().getSleepService().sleep(getContext(), new Sleep(0, user.getId(), LocalDate.now().minusDays(3), 9));
+ServiceFactory.getInstance().getSleepService().sleep(getContext(), new Sleep(0, user.getId(), LocalDate.now().minusDays(2), 10));
+ServiceFactory.getInstance().getSleepService().sleep(getContext(), new Sleep(0, user.getId(), LocalDate.now().minusDays(1), 4));
+
+ServiceFactory.getInstance().getRestService().rest(getContext(), new Rest(0, user.getId(), LocalDate.now().minusDays(5), 5));
+ServiceFactory.getInstance().getRestService().rest(getContext(), new Rest(0, user.getId(), LocalDate.now().minusDays(4), 4));
+ServiceFactory.getInstance().getRestService().rest(getContext(), new Rest(0, user.getId(), LocalDate.now().minusDays(3), 5));
+ServiceFactory.getInstance().getRestService().rest(getContext(), new Rest(0, user.getId(), LocalDate.now().minusDays(2), 4));
+ServiceFactory.getInstance().getRestService().rest(getContext(), new Rest(0, user.getId(), LocalDate.now().minusDays(1), 5));
+
+ServiceFactory.getInstance().getWaterService().drink(getContext(), new Water(0, user.getId(), LocalDate.now().minusDays(5), 3));
+ServiceFactory.getInstance().getWaterService().drink(getContext(), new Water(0, user.getId(), LocalDate.now().minusDays(4), 4));
+ServiceFactory.getInstance().getWaterService().drink(getContext(), new Water(0, user.getId(), LocalDate.now().minusDays(3), 2));
+ServiceFactory.getInstance().getWaterService().drink(getContext(), new Water(0, user.getId(), LocalDate.now().minusDays(2), 3));
+ServiceFactory.getInstance().getWaterService().drink(getContext(), new Water(0, user.getId(), LocalDate.now().minusDays(1), 1));
+     */
 }

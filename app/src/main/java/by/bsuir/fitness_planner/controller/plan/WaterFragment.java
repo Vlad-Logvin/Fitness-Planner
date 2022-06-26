@@ -31,7 +31,6 @@ import by.bsuir.fitness_planner.R;
 import by.bsuir.fitness_planner.databinding.HistoryPopupBinding;
 import by.bsuir.fitness_planner.databinding.WaterFragmentBinding;
 import by.bsuir.fitness_planner.databinding.WaterPopupBinding;
-import by.bsuir.fitness_planner.model.Food;
 import by.bsuir.fitness_planner.model.User;
 import by.bsuir.fitness_planner.model.Water;
 import by.bsuir.fitness_planner.service.ServiceFactory;
@@ -64,11 +63,11 @@ public class WaterFragment extends Fragment {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private String setTextToEdit() {
-        double sum = ServiceFactory.getInstance().getFoodService()
+        double sum = ServiceFactory.getInstance().getWaterService()
                 .findByUserIdAndDate(getContext(), user.getId(), LocalDate.now()).stream()
-                .mapToDouble(Food::getCalories).sum();
-        double percentage = user.getAimCalories() / sum * 100.0;
-        if (percentage > 60.0) {
+                .mapToDouble(Water::getAmount).sum();
+        double percentage = sum / user.getAimWater() * 100.0;
+        if (percentage < 60.0) {
             return Response.KEEP_GOING.getMessage();
         } else if (percentage >= 60.0 && percentage < 95.0) {
             return Response.ALMOST_DONE.getMessage();

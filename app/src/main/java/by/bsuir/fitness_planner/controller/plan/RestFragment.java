@@ -31,7 +31,6 @@ import by.bsuir.fitness_planner.R;
 import by.bsuir.fitness_planner.databinding.HistoryPopupBinding;
 import by.bsuir.fitness_planner.databinding.RestFragmentBinding;
 import by.bsuir.fitness_planner.databinding.RestPopupBinding;
-import by.bsuir.fitness_planner.model.Food;
 import by.bsuir.fitness_planner.model.Rest;
 import by.bsuir.fitness_planner.model.User;
 import by.bsuir.fitness_planner.service.ServiceFactory;
@@ -64,11 +63,11 @@ public class RestFragment extends Fragment {
 
     @RequiresApi(api = Build.VERSION_CODES.O)
     private String setTextToEdit() {
-        double sum = ServiceFactory.getInstance().getFoodService()
+        double sum = ServiceFactory.getInstance().getRestService()
                 .findByUserIdAndDate(getContext(), user.getId(), LocalDate.now()).stream()
-                .mapToDouble(Food::getCalories).sum();
-        double percentage = user.getAimCalories() / sum * 100.0;
-        if (percentage > 60.0) {
+                .mapToDouble(Rest::getAmount).sum();
+        double percentage = sum / user.getAimRest() * 100.0;
+        if (percentage < 60.0) {
             return Response.KEEP_GOING.getMessage();
         } else if (percentage >= 60.0 && percentage < 95.0) {
             return Response.ALMOST_DONE.getMessage();
